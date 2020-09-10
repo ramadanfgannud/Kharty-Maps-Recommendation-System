@@ -48,7 +48,7 @@ def unique(list1):
 #Checking keys:
 #Records 334 and 335 has all the 26 atts exsists
 # 979 maps were downloaded (Mostly all public maps)
-# Total downloads is 28176 and I know who downloaded which
+# Total downloads is 28176 and It's known who downloaded which
 
 maps[334].keys()
 
@@ -267,7 +267,7 @@ def recommend(df, u, nu, nearestN, prnt):
         for j in range(len(pearsons[i])):
             rowu = u.iloc[j]
             for k in range(len(rowu)):
-                if rowu[k] != 0 and rownu[k] == 0:   #maps the new user didn't download yet a simmilar user downloaded
+                if rowu[k] != 0 and rownu[k] == 0:   #maps the new user didn't download yet a similar user downloaded
                     recommend.append(df.loc[df['objectId'] == u.columns[k], 'title'].iloc[0]) 
 
         recommend = CountFrequency(recommend)    #dictionary of maps with their number of repeatance within nearestN
